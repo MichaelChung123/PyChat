@@ -1,0 +1,12 @@
+Redux steps:
+- Create Store in store.js
+- import Provider into App.js
+- import store from store.js into App.js
+- Wrap App.js content with Provider, and pass in store as a prop
+- make reducer folder with index.js (root reducer file).
+- make reducer for what ever you want to do. reducers evaluate an action and sends state depending on what the action does
+- make actions folder and make type.js that defines ALL of your actions
+- make the action file and define the method to perform the functionality
+- in the component file, import connect and create a mapStateToProps function that allows you to access store through props
+- import the method and put it into your connect call at the end as an obj
+- you can access the action method through props now
