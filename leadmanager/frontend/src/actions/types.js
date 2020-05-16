@@ -24,3 +24,4 @@ export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
 export const SEND_MSG = 'SEND_MSG';
+export const GET_MSGS = 'GET_MSGS';

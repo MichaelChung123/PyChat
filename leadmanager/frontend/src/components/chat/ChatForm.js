@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { sendMessage } from '../../actions/chatActions'
 
 class ChatForm extends Component {
     state = {
@@ -7,7 +9,10 @@ class ChatForm extends Component {
     onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
     onSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        
+        this.props.sendMessage(this.state.message);
+
     };
 
     render() {
@@ -35,4 +40,4 @@ class ChatForm extends Component {
     }
 }
 
-export default ChatForm
+export default connect(null, { sendMessage })(ChatForm)

@@ -6,6 +6,7 @@ import auth from './auth'
 import redux from './redux'
 import postReducers from './postReducers'
 import increment from './incrementReducer'
+import chatMessages from './chatReducers'
 
 export default combineReducers({
     leads,
@@ -14,6 +15,7 @@ export default combineReducers({
     auth,
     redux,
     posts: postReducers,
-    increment
+    increment,
+    chatMessages
 });
 

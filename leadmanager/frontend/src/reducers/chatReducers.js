@@ -1,4 +1,4 @@
-import {SEND_MSG} from '../actions/types'
+import {SEND_MSG, GET_MSGS} from '../actions/types'
 
 const initialState = {
     messages: []
@@ -11,5 +11,12 @@ export default function (state = initialState, action) {
                 ...state,
                 messages: [...state.messages, action.payload]
             }
+        case GET_MSGS:
+            return {
+                ...state,
+                messages: action.payload
+            }
+        default:
+            return state;
     }
 }
